@@ -2,46 +2,46 @@
 
 import React from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { BookOpen, Calculator, Sparkles, ChevronDown, Menu } from "lucide-react";
+import { BookOpen, Calculator, Sparkles, ChevronDown } from "lucide-react";
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-[#ffffff]/90 backdrop-blur-md transition-all border-b border-[#f2f2f3]">
-      <div className="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+    <header className="w-full bg-transparent">
+      <div className="max-w-[1200px] mx-auto px-6 h-24 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-[#17191c] text-[#ffffff] flex items-center justify-center font-bold text-sm">
             M2
           </div>
           <div>
-            <span className="font-signifier text-xl text-[#17191c] tracking-tight block leading-none">
+            <span className="font-signifier text-[20px] text-[#17191c] tracking-tight block leading-none">
               Matemática II
             </span>
-            <span className="text-[12px] text-[#777b86] font-sohne font-medium tracking-wider uppercase">
+            <span className="text-[12px] text-[#979799] font-sohne font-medium tracking-wider uppercase">
               MAT215 · UES
             </span>
           </div>
         </div>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 text-[15px] font-sohne text-[#17191c]">
-          <a href="#inicio" className="hover:text-[#777b86] transition-colors">
+        <nav className="hidden md:flex items-center gap-8 text-[16px] font-sohne text-[#17191c]">
+          <a href="#inicio" className="nav-link">
             Inicio
           </a>
-          <a href="#unidades" className="hover:text-[#777b86] transition-colors">
+          <a href="#unidades" className="nav-link">
             Unidades
           </a>
 
           {/* Radix UI Dropdown Menu */}
           <DropdownMenu.Root>
-            <DropdownMenu.Trigger className="flex items-center gap-1 hover:text-[#777b86] transition-colors outline-none cursor-pointer">
+            <DropdownMenu.Trigger className="nav-link flex items-center gap-1 outline-none cursor-pointer">
               <span>Herramientas</span>
               <ChevronDown className="w-4 h-4 text-[#777b86]" />
             </DropdownMenu.Trigger>
 
             <DropdownMenu.Portal>
               <DropdownMenu.Content
-                className="min-w-[200px] bg-[#ffffff] rounded-2xl p-2 shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-[#f2f2f3] z-50 text-[14px] font-sohne animate-in fade-in-80"
+                className="min-w-[200px] bg-[#ffffff] rounded-2xl p-2 shadow-subtle border border-[#f2f2f3] z-50 text-[14px] font-sohne animate-in fade-in-80"
                 sideOffset={8}
               >
                 <DropdownMenu.Item className="flex items-center gap-2 px-3 py-2 rounded-xl text-[#17191c] hover:bg-[#f2f2f3] outline-none cursor-pointer">
@@ -60,20 +60,20 @@ export function Navbar() {
             </DropdownMenu.Portal>
           </DropdownMenu.Root>
 
-          <a href="#recursos" className="hover:text-[#777b86] transition-colors">
+          <a href="#recursos" className="nav-link">
             Recursos
           </a>
         </nav>
 
         {/* Action CTAs */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-6">
           <a
             href="#calculadora"
-            className="hidden sm:inline-flex text-[#17191c] hover:underline text-[15px] font-sohne px-2 py-1"
+            className="hidden sm:inline-flex text-[#17191c] hover:underline text-[16px] font-sohne"
           >
             Explorar Fórmulas →
           </a>
-          <a href="#simulador" className="btn-pill-filled text-[15px]">
+          <a href="#simulador" className="btn-pill-filled text-[16px]">
             Iniciar Simulación
           </a>
         </div>
@@ -81,3 +81,4 @@ export function Navbar() {
     </header>
   );
 }
+
