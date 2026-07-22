@@ -41,6 +41,8 @@ jobs:
 
       - name: Build Static Export
         run: pnpm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /mat215-2016
 
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v3
