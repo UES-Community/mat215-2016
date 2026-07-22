@@ -19,7 +19,7 @@ export function AIComposer() {
     <div className="w-full max-w-xl mx-auto">
       <form
         onSubmit={handleSend}
-        className="bg-[#ffffff] border border-[#ececec] rounded-[16px] p-3 flex items-center gap-3 shadow-[0_4px_24px_rgba(0,0,0,0.04)] focus-within:border-[#17191c] transition-all"
+        className="bg-[#ffffff] border border-[#ececec] rounded-[16px] p-4 flex items-center gap-3 shadow-[0_4px_24px_rgba(0,0,0,0.04)] focus-within:border-[#17191c] transition-all"
       >
         <div className="flex items-center gap-1.5 pl-2 text-[#a3a6af]">
           <button
