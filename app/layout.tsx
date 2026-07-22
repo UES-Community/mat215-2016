@@ -5,22 +5,22 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sohne",
+  variable: "--font-inter",
   display: "swap",
 });
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-signifier",
+  variable: "--font-source-serif",
   weight: ["400"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "MAT215 - Matemática II | Plataforma Educativa e Interactiva",
+  title: "Steep — MAT215 | Matemática II",
   description:
-    "Plataforma interactiva para Matemática II (MAT215): Límites, Derivadas, Integrales, Álgebra Lineal y Simulaciones Vectoriales 3D.",
+    "Plataforma educativa para Matemática II (MAT215): Límites, Derivadas, Integrales, Álgebra Lineal y Simulaciones Vectoriales 3D.",
 };
 
 export default function RootLayout({
@@ -30,10 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} ${sourceSerif.variable}`}>
-      <body className="min-h-screen bg-[#ffffff] text-[#17191c] antialiased">
+      <body className="min-h-screen bg-[#ffffff] text-[#17191c] antialiased font-sohne">
         {children}
       </body>
     </html>
   );
 }
-
